@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "utf-8"/>
+    <title>Registration Form</title>
+    <style type = "text/css">
+        h1{
+            text-align: center;
+        }
+        table{
+            border: 1px dotted black;
+        }
+        table th, table td{
+            border: 1px dotted lightgray;
+        }
+        .leftSide{
+            text-align: right;
+        }
+        input[type=text]{
+            width: 25%;
+            padding: 4px;
+        }
+        input[type=email]{
+            width: 25%;
+            padding: 4px;
+        }
+        input[type=number]{
+            width: 25%;
+            padding: 4px;
+        }
+        textarea{
+            overflow-y: scroll;
+            resize: none;
+        }
+        #currency{
+            padding: 4px;
+        }
+        #period{
+            padding: 4px;
+        }
+        #leftQual{
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        #rightQual{
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    </style>
+    <script type = "text/javascript">
+        var defaultLeft = undefined;
+        var defaultRight = undefined;
+        function snapshot(){
+            if(defaultLeft == undefined && defaultRight == undefined) {
+                defaultRight = document.getElementById("rightQual").innerHTML;
+                defaultLeft = document.getElementById("leftQual").innerHTML;
+            }
+        }
+        function addToRight(){
+            var leftQual = document.getElementById("leftQual");
+            var selItem = leftQual.selectedIndex;
+
+            if (selItem == -1) {
+                window.alert("You must first select an item on the left side.")
+            } else {
+                var rightQual = document.getElementById("rightQual");
+                var moveThis = leftQual[selItem];
+                leftQual.remove(leftQual.selectedIndex);
+                rightQual.add(moveThis);
+            }
+        }
+        function removeFromRight(){
+            var rightQual = document.getElementById("rightQual");
+            var selItem = rightQual.selectedIndex;
+
+            if (selItem == -1) {
+                window.alert("You must first select an item on the right side.")
+            } else {
+                var leftQual = document.getElementById("leftQual");
+                var moveThis = rightQual[selItem];
+                rightQual.remove(rightQual.selectedIndex);
+                leftQual.add(moveThis);
+            }
+        }
+        function customReset(){
+            var rightQual = document.getElementById("rightQual");
+            var leftQual = document.getElementById("leftQual");
+            rightQual.innerHTML = defaultRight;
+            leftQual.innerHTML = defaultLeft;
+        }
+        function radioEmulate(selectedId){
+            var checkboxes = document.getElementsByName("status");
+            for (var i = 0; i < checkboxes.length; i++){
+               if (checkboxes[i].id != selectedId){
+                   checkboxes[i].checked = false;
+               }
+            }
+        }
+    </script>
+</head>
+
+<body onload = "snapshot()">
+<h1>Job Details:</h1>
+<form method = "post">
+    <table width = "60%" align = "center" cellpadding = "10px">
+        <tbody>
+        <tr>
+            <td class = "leftSide">Job Title:</td>
+            <td>
+                <input type = "text" id = "jobTitle" name = "jobTitle"/>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Description:</td>
+            <td>
+                <textarea id = "description" name = "description" maxlength = "500" rows = "4"></textarea>
+                <br />
+                Brief Description should have at most 500 characters
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Company Name:</td>
+            <td>
+                <input type = "text" id = "companyName" name = "companyName"/>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Company Number:</td>
+            <td>
+                <input type = "number" id = "companyNum" name = "companyNum"/>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Contact Person:</td>
+            <td>
+                <input type = "text" id = "contactPerson" name = "contactPerson"/>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Email:</td>
+            <td>
+                <input type = "email" id = "email" name = "email"/>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Work Status:</td>
+            <td>
+                <input type = "checkbox" id = "status1" name = "status" value = "fullTime" onclick = "radioEmulate('status1')">
+                Full Time
+                </input>
+                <input type = "checkbox" id = "status2" name = "status" value = "partTime" onclick = "radioEmulate('status2')">
+                Part Time
+                </input>
+                <input type = "checkbox" id = "status3" name = "status" value = "perDim" onclick = "radioEmulate('status3')">
+                Per Dim
+                </input>
+                <input type = "checkbox" id = "status4" name = "status" value = "others" onclick = "radioEmulate('status4')">
+                Others
+                </input>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Salary:</td>
+            <td>
+                <input type = "number" id = "salary" name = "salary"/>
+                <select id = "currency" name = "currency">
+                    <option label = "US Dollar" value = "usd" selected></option>
+                    <option label = "Japanese Yen" value = "yen"></option>
+                    <option label = "Singapore Dollar" value = "sgd"></option>
+                </select>
+                <select id = "period" name = "period">
+                    <option label = "Yearly" value = "yearly" selected></option>
+                    <option label = "Monthly" value = "monthly"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Experience(Years):</td>
+            <td>
+                <input type = "text" id = "experience" name = "experience"/>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Locations:</td>
+            <td>
+                <input type = "text" id = "locations" name = "locations"/>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">Qualifications:</td>
+            <td>
+                <select id = "leftQual" name = "leftQual" size = "4">
+                    <option label = "Any" value = "any"></option>
+                    <option label = "High School" value = "high school"></option>
+                    <option label = "Associate" value = "associate"></option>
+                    <option label = "Pre Bachelors" value = "pre bachelors"></option>
+                    <option label = "Bachelors" value = "bachelors"></option>
+                </select>
+                <input type = "button" value = "Add >>" onclick = "addToRight()"/>
+                <input type = "button" value = "<< Remove" onclick = "removeFromRight()"/>
+                <select id = "rightQual" name = "rightQual" size = "4">
+                    <option label = "Any" value = "any"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class = "leftSide">
+                <input type = "submit" value = "Submit" name = "submitRegistration"/>
+            </td>
+            <td>
+                <input type = "reset" value = "Reset" name = "resetRegistration" onclick = "customReset()"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>
