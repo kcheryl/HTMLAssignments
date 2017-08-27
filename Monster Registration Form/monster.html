@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>Online Registration Form</title>
+    <style type="text/css">
+        .form-row{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .container{
+            background-color: #eee;
+        }
+        hr{
+            margin-bottom: 50px;
+        }
+        h1{
+            text-align: center;
+        }
+        .was-validated #agreementTxt{
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<form class="container" id="needs-validation" novalidate>
+    <br/>
+    <h1>Monster's Registration Form</h1>
+    <div class="form-row justify-content-center">
+        <div class="col-4">
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" required></input>
+            <div class="invalid-feedback">Please fill First Name.</div>
+        </div>
+        <div class="col-4">
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name"></input>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="col-4">
+            <input type="email" class="form-control" id="emailAdd" name="emailAdd" placeholder="Email address" required></input>
+            <div class="invalid-feedback">Please fill Email Address.</div>
+        </div>
+        <div class="col-4">
+            <input type="password" class="form-control" id="psw" name="psw" placeholder="Choose a password" required></input>
+            <div class="invalid-feedback">You have not keyed in the Password. Please do so to proceed.</div>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="col-8">
+            <select id="location" class="form-control" name="location">
+                <option id="currentLocation" name="currentLocation" disabled selected>Current Location</option>
+                <option id="sgLocation" name="sgLocation">Singapore</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="col-1">
+            <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+91"></input>
+        </div>
+        <div class="col-7">
+            <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Mobile number" required></input>
+            <div class="invalid-feedback">Please enter valid Mobile number.</div>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="col-4">
+            <label for="experienceYear">Total experience</label>
+            <select id="experienceYear" class="form-control" name="experienceYear">
+                <option id="year" name="year" disabled selected>Year</option>
+                <option id="year0" name="year0">0</option>
+                <option id="year1" name="year1">1</option>
+                <option id="year2" name="year2">2</option>
+                <option id="year3" name="year3">3</option>
+                <option id="year4" name="year4">4</option>
+                <option id="year5" name="year5">5</option>
+            </select>
+        </div>
+        <div class="col-4">
+            <label for="experienceMonth">&nbsp;</label>
+            <select id = "experienceMonth" class="form-control" name="experienceMonth">
+                <option id="month" name="month" disabled selected>Month</option>
+                <option id="month0" name="month0">0</option>
+                <option id="month1" name="month1">1</option>
+                <option id="month2" name="month2">2</option>
+                <option id="month3" name="month3">3</option>
+                <option id="month4" name="month4">4</option>
+                <option id="month5" name="month5">5</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="col-8">
+            <input type="text" class="form-control" id="skills" name="skills" placeholder="Key skills" required></input>
+            <div class="invalid-feedback">Please enter your key skills.</div>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="col-8">
+            <select id="industry" class="form-control" name="industry">
+                <option id="industryHeading" name="industryHeading" disabled selected>Industry</option>
+                <option id="industry1" name="any">Any</option>
+                <option id="industry2" name="automotive">Automotive/Ancillaries</option>
+                <option id="industry3" name="banking">Banking/Financial Services</option>
+                <option id="industry4" name="biotech">Bio Technology & Life Sciences</option>
+                <option id="industry5" name="chemicals">Chemicals/Petrochemicals</option>
+                <option id="industry6" name="construction">Construction & Engineering</option>
+                <option id="industry7" name="fmcg">FMCG</option>
+                <option id="industry8" name="education">Education</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="col-8">
+            <select id="function" class="form-control" name="function">
+                <option id="functionHeading" name="functionHeading" disabled selected>Function</option>
+                <option id="function1" name="admin">Admin/Secretarial</option>
+                <option id="function2" name="customerService">Customer Service/Call Centre/BPO</option>
+                <option id="function3" name="finance">Finance & Accounts</option>
+                <option id="function4" name="hr">Human Resources</option>
+                <option id="function5" name="it">IT</option>
+                <option id="function6" name="legal">Legal</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row justify-content-start">
+        <div class="col-2"></div>
+        <div class="col">&nbsp;&nbsp;Have a resume ready? Upload it now</div>
+    </div>
+    <div class="form-row justify-content-start">
+        <div class="col-2">
+            <!-- Padding Dummy -->
+        </div>
+        <div class="col-3">
+            <label class="custom-file">
+                <input type="file" id="file" class="custom-file-input">
+                <span class="custom-file-control"></span>
+            </label>
+        </div>
+    </div>
+    <div class="form-row justify-content-start" style="margin-top:-20px">
+            <div class="col-2"></div>
+            <small class="col">&nbsp;&nbsp;Supported Formats: DOC, DOCX, TXT, PDF, RTF & Max. File size: 2MB</small>
+    </div>
+    
+    <hr/>
+
+    <div class="form-row justify-content-start" style="margin-top:-20px">
+        <div class="col-2"></div>
+        <div class="col">
+        <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" required>
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description" id="agreementTxt">
+                I have read and agree to Monster's <a href="">privacy statement</a>, <a href="">terms of use</a> and <a href="">default preferences</a>
+            </span>
+        </label>
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <input type="submit" class="btn btn-success" name="submit" value="Create Now"></input>
+    </div>
+    <br/><br/>
+</form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            "use strict";
+            window.addEventListener("load", function() {
+                var form = document.getElementById("needs-validation");
+                form.addEventListener("submit", function(event) {
+                    if (form.checkValidity() == false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                }, false);
+            }, false);
+        }());
+    </script>
+</body>
+</html>
