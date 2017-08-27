@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69c0e8d6-ff6c-4036-97b5-d65aecb62a19" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Class Webpage/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Class Webpage/background2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Class Webpage/floppydisk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Login Page/entrust.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Class Webpage/linkpage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Class Webpage/page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Login Page/login.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Monster Registration Form/monster.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -50,7 +58,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -135,15 +143,15 @@
       <workItem from="1503579852141" duration="9678000" />
       <workItem from="1503623384707" duration="595000" />
       <workItem from="1503816758626" duration="4128000" />
-      <workItem from="1503843358589" duration="11000" />
+      <workItem from="1503843358589" duration="117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57632000" />
+    <option name="totallyTimeSpent" value="57738000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18448023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
